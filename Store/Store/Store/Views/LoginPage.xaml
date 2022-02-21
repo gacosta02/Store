@@ -6,9 +6,21 @@
              mc:Ignorable="d"
              x:Class="Store.Views.LoginPage"
              Shell.NavBarIsVisible="False">
+    
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+
+      <StackLayout Padding="10,0,10,0" VerticalOptions="Center" >
+            <Label VerticalOptions="Center" FontSize="Body" TextColor="Black" HorizontalTextAlignment="Center"
+                   Text="¡Bienvenido a Gallo Store!" Padding="0,0,0,100"/> 
+            <Button VerticalOptions="Center" Text="Acceder" Command="{Binding LoginCommand}"/>
+        <Button VerticalOptions="Center" Text="Registrar" Command="{Binding RegistrarCommand}"/>
+
+           
+
         </StackLayout>
-    </ContentPage.Content>
+
+      </ContentPage.Content>
+    
+
+
 </ContentPage>
