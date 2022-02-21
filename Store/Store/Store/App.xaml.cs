@@ -14,8 +14,8 @@ namespace Store
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-             MainPage = new AppShell();
-           // MainPage = new LoginPage();
+            // MainPage = new AppShell();
+            MainPage = new InicioSession();
         }
 
         protected override void OnStart()
