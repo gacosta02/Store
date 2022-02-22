@@ -3,8 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Store.Views.RegistroPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+        <StackLayout VerticalOptions="CenterAndExpand">
+
+            <Image Source="Logo.jpg" HeightRequest="100" WidthRequest="40"  ></Image>
+            <Entry Placeholder="Nombre de Usuario" PlaceholderColor="Gray" Margin="20,10,20,0" />
+            <Entry Placeholder="Celular" PlaceholderColor="Gray" Margin="20,0"/>
+            <Entry Placeholder="Direccion" PlaceholderColor="Gray" Margin="20,0"/>
+            <Entry Placeholder="Contraseña" PlaceholderColor="Gray" Margin="20,0" IsPassword="True" />
+            <Button Text="Registrar" FontSize="Body" Margin="30,10,30,0" CornerRadius="10"></Button>
+            
+            <Label Text=""
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
