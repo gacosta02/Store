@@ -45,8 +45,12 @@
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
+                
             </StackLayout>
+
+            
         </ScrollView>
+        
     </Grid>
 
 </ContentPage>

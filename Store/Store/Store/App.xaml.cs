@@ -14,6 +14,7 @@ namespace Store
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
+           // MainPage = new BuzonPage();
             MainPage = new AppShell();
             //MainPage = new RegistroPage();
            // MainPage = new LoginPage();
