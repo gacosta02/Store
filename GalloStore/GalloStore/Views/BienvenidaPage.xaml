@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalloStore.Views.BienvenidaPage">
+    <ContentPage.Content>
+
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center" >
+
+            <Image Source="Logo.jpg" HeightRequest="100" WidthRequest="40" Margin="0,0,0,15"  ></Image>
+            <Label VerticalOptions="Center" FontSize="Body" TextColor="Black" HorizontalTextAlignment="Center"
+                   Text="¡Bienvenido a Gallo Store!" Padding="0,0,0,50"/>
+            <Button VerticalOptions="Center" Text="Acceder" Margin="30,10,30,0" BackgroundColor="#2196F3" CornerRadius="10" Command="{Binding LoginCommand}"/>
+            <Button VerticalOptions="Center" Text="Registrar" Margin="30,10,30,0" BackgroundColor="#2196F3" CornerRadius="10" Command="{Binding RegistrarCommand}"/>
+
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

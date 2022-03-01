@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:Views= "clr-namespace:GalloStore.Views" 
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+              android:TabbedPage.ToolbarPlacement="Bottom"
+             x:Class="GalloStore.Views.MenuTabbedPage">
+  <!--Pages can be added as references or inline-->
+
+    <NavigationPage Title="Tab Page 01" Icon="icono01.png">
+        <x:Arguments>
+            <Views:BienvenidaPage/>
+        </x:Arguments>
+    </NavigationPage>
+    
+    <NavigationPage Title="Tab Page 01" Icon="icono01.png">
+        <x:Arguments>
+            <Views:BienvenidaPage/>
+        </x:Arguments>
+    </NavigationPage>
+
+
+</TabbedPage>
