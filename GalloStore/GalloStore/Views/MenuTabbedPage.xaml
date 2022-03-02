@@ -7,15 +7,27 @@
              x:Class="GalloStore.Views.MenuTabbedPage">
   <!--Pages can be added as references or inline-->
 
-    <NavigationPage Title="Tab Page 01" Icon="icono01.png">
+    <NavigationPage Title="Home" Icon="Casa.png">
         <x:Arguments>
-            <Views:BienvenidaPage/>
+            <Views:HomePage/>
         </x:Arguments>
     </NavigationPage>
     
-    <NavigationPage Title="Tab Page 01" Icon="icono01.png">
+    <NavigationPage Title="Catalogo" Icon="Catalogo.png">
         <x:Arguments>
-            <Views:BienvenidaPage/>
+            <Views:CatalogoPage/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Soporte" Icon="Ayuda.png">
+        <x:Arguments>
+            <Views:CatalogoPage/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Buzon de Orden" Icon="Orden.png">
+        <x:Arguments>
+            <Views:BuzonPage/>
         </x:Arguments>
     </NavigationPage>
 

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalloStore.Views.HomePage"
+             Title="Home">
+    
+    <ContentPage.Resources>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="White" />
+            <Setter Property="BorderColor" Value="#2196F3" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="CornerRadius" Value="15" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="0, 4" />
+        </Style>
+
+        <Style x:Key="headerLabel" TargetType="Label">
+            <Setter Property="Margin" Value="0, 8" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="#2196F3" />
+        </Style>
+
+        <Style TargetType="Image">
+            <Setter Property="FlexLayout.Order" Value="-1" />
+            <Setter Property="FlexLayout.AlignSelf" Value="Center" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Text" Value="LEARN MORE" />
+            <Setter Property="FontSize" Value="Large" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="#2196F3" />
+            <Setter Property="CornerRadius" Value="20" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView Orientation="Both">
+        <FlexLayout>
+            <Frame WidthRequest="300"
+                   HeightRequest="640"
+                   Margin="10,20,0,0">
+
+                <FlexLayout Direction="Column">
+                    <Label Text="¿Que encontraras aqui?"
+                           Style="{StaticResource headerLabel}" />
+                    <Label Text="Es Facil Rapido y conveniente para ti, Obtendras:" />
+                    <Label Text=" &#x2022; Los mejores precios " />
+                    <Label Text="  &#x2022; Productos de Calidad" />
+                    <Label Text="  &#x2022; Variedad de opciones en un solo clic." />
+                    <Label Text="  &#x2022; Empaque Biodegradable" />
+                    <Image Source="Aviso.png"
+                           WidthRequest="180"
+                           HeightRequest="180" />
+                    <Label FlexLayout.Grow="1" />
+                    <Button x:Name="MoverPage" />
+                </FlexLayout>
+            </Frame>
+
+            <Frame WidthRequest="300"
+                   HeightRequest="640"
+                   Margin="10,20,0,0">
+
+                <FlexLayout Direction="Column">
+                    <Label Text="Banana Monkey"
+                           Style="{StaticResource headerLabel}" />
+                    <Label Text="Watch this monkey eat a giant banana." />
+                    <Label Text="  &#x2022; More fun than a barrel of monkeys" />
+                    <Label Text="  &#x2022; Banana not included" />
+                    <Image Source="Organizar.png"
+                           WidthRequest="180"
+                           HeightRequest="180" />
+                    <Label FlexLayout.Grow="1" />
+                    <Button />
+                </FlexLayout>
+            </Frame>
+
+            <Frame WidthRequest="300"
+                   HeightRequest="640"
+                   Margin="10,20,0,0">
+
+                <FlexLayout Direction="Column">
+                    <Label Text="Face-Palm Monkey"
+                           Style="{StaticResource headerLabel}" />
+                    <Label Text="This monkey reacts appropriately to ridiculous assertions and actions." />
+                    <Label Text="  &#x2022; Cynical but not unfriendly" />
+                    <Label Text="  &#x2022; Seven varieties of grimaces" />
+                    <Label Text="  &#x2022; Doesn't laugh at your jokes" />
+                    <Image Source="Habitos.png"
+                           WidthRequest="180"
+                           HeightRequest="180" />
+                    <Label FlexLayout.Grow="1" />
+                    <Button />
+                </FlexLayout>
+            </Frame>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>
