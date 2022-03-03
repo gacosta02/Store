@@ -28,7 +28,7 @@
         </Style>
 
         <Style TargetType="Button">
-            <Setter Property="Text" Value="LEARN MORE" />
+            <Setter Property="Text" Value="Ver Mas" />
             <Setter Property="FontSize" Value="Large" />
             <Setter Property="TextColor" Value="White" />
             <Setter Property="BackgroundColor" Value="#2196F3" />
@@ -46,7 +46,7 @@
                     <Label Text="¿Que encontraras aqui?"
                            Style="{StaticResource headerLabel}" />
                     <Label Text="Es Facil Rapido y conveniente para ti, Obtendras:" />
-                    <Label Text=" &#x2022; Los mejores precios " />
+                    <Label Text="  &#x2022; Los mejores precios " />
                     <Label Text="  &#x2022; Productos de Calidad" />
                     <Label Text="  &#x2022; Variedad de opciones en un solo clic." />
                     <Label Text="  &#x2022; Empaque Biodegradable" />
@@ -63,16 +63,18 @@
                    Margin="10,20,0,0">
 
                 <FlexLayout Direction="Column">
-                    <Label Text="Banana Monkey"
+                    <Label Text="¿Como organizar tu Negocio?"
                            Style="{StaticResource headerLabel}" />
-                    <Label Text="Watch this monkey eat a giant banana." />
-                    <Label Text="  &#x2022; More fun than a barrel of monkeys" />
-                    <Label Text="  &#x2022; Banana not included" />
+                    <Label Text="Los productos tienen una manera de almcenarse, si no sabes, aqui tienes algunas recomendaciones:" />
+                    <Label Text="  &#x2022; Temperatura Adecuada." />
+                    <Label Text="  &#x2022; Usar bolsas Hermeticas o contenedores de cristal." />
+                    <Label Text="  &#x2022; Mantener espacio entre cada producto. "/>
+                    <Label Text="  &#x2022; Los Alimentos no deben tocar las Paredes del Refrigerador. "/>
                     <Image Source="Organizar.png"
                            WidthRequest="180"
                            HeightRequest="180" />
                     <Label FlexLayout.Grow="1" />
-                    <Button />
+                    <Button x:Name="VerPage" />
                 </FlexLayout>
             </Frame>
 
@@ -81,17 +83,21 @@
                    Margin="10,20,0,0">
 
                 <FlexLayout Direction="Column">
-                    <Label Text="Face-Palm Monkey"
+                    <Label Text="7 Pequeños habitos para una Alimentacion sostenible"
                            Style="{StaticResource headerLabel}" />
-                    <Label Text="This monkey reacts appropriately to ridiculous assertions and actions." />
-                    <Label Text="  &#x2022; Cynical but not unfriendly" />
-                    <Label Text="  &#x2022; Seven varieties of grimaces" />
-                    <Label Text="  &#x2022; Doesn't laugh at your jokes" />
+                    <Label Text="Las directrices Alimenticias pueden varias dependiendo desde documentos a estudios realizados, pero siempre terminan en los mismos consejos para mantener una vida saludable." />
+                    <Label Text="  &#x2022; Comer muchcas Hortalizas y Frutas" />
+                    <Label Text="  &#x2022; Vigila el consumo de grasas." />
+                    <Label Text="  &#x2022; Reduce el consumo de alimentos altos en azucar." />
+                    <Label Text="  &#x2022; Reduce el consumo de sodio/sal" />
+                    <!--<Label Text="  &#x2022; Bebe agua regularmente." />
+                    <Label Text="  &#x2022; Si consumes alcohol, hazlo con moderacion." />
+                    <Label Text="  &#x2022; Haz ejercicio fisico diario." />-->
                     <Image Source="Habitos.png"
                            WidthRequest="180"
                            HeightRequest="180" />
                     <Label FlexLayout.Grow="1" />
-                    <Button />
+                    <Button x:Name="MostrarPage"/>
                 </FlexLayout>
             </Frame>
         </FlexLayout>

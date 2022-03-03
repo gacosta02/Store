@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalloStore.Views.VerMasTerceraPage"
+             Title="Volver">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+
+                <Image Source="Aviso.png" WidthRequest="350" Margin="0,20,0,0"/>
+                <Label Text="7 habitos pequeños habitos para una alimentacion sostenible" FontSize="Title"   Margin="40,10,20,10" TextColor="Gray"/>
+
+                <Label Text="Las directrices Alimenticias pueden varias dependiendo desde documentos a estudios realizados, pero siempre terminan en los mismos consejos para mantener una vida saludable." 
+                   Margin="20,0,0,0" FontSize="Body"/>
+                <Label Text="  &#x2022; Comer muchcas Hortalizas y Frutas. " Margin="20,0,0,0" FontSize="Body" TextColor="Black"/>
+                <Label Text="Algunos países especifican el número de raciones de frutas y hortalizas que deberíamos consumir diariamente: por ejemplo, seis en el caso de Grecia, o cinco en el caso de Costa Rica e Islandia.
+ Canadá incluso especifica los colores de las hortalizas que se deben consumir (una hortaliza verde oscura y otra naranja cada día). Los tamaños de las raciones pueden variar según el país;
+ sin embargo, todas las guías recomiendan comer muchas hortalizas y frutas frescas todos los días."
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Vigila el consumo de grasas." Margin="20,0,0,0" FontSize="Body" TextColor="Black"/>
+                <Label Text="Aunque expresándolo de manera diferente, la mayoría de las guías mencionan reducir el consumo de grasas sólidas y saturadas, y sugieren sustituir las grasas animales por aceites vegetales."
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Reduce el consumo de alimentos altos en azucar." Margin="20,0,0,0" FontSize="Body" TextColor="Black"/>
+                <Label Text="Las guías de todos los países recomiendan seguir una dieta baja en azúcar e ingerir fruta en lugar de dulces procesados o bebidas azucaradas para satisfacer a los paladares más golosos"
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Reduce el consumo de sodio/sal"  Margin="20,0,0,0" FontSize="Body" TextColor="Black"/>
+                <Label Text="Nigeria sugiere reducir el empleo de cubitos de caldo; Malta recomienda limitar los alimentos precocinados con alto contenido en sodio. Colombia, por su lado, sugiere limitar la ingesta de carnes procesadas, 
+ conservas y productos envasados que suelen tener un alto contenido en sal. En todos los países, 
+ existe un amplio consenso sobre la conveniencia de seguir una dieta baja en sal."
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Bebe agua regularmente."  Margin="20,0,0,0" FontSize="Body" TextColor="Black"/>
+                <Label Text="En general, las guías recomiendan beber agua como mejor vía para saciar la sed. Es evidente que siempre hay que asegurarse antes de que el agua sea potable. ."
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Si consumes alcohol, hazlo con moderacion."  Margin="20,0,0,0" FontSize="Body" TextColor="Black"/>
+                <Label Text="Si optas por beber alcohol –ya sea cerveza, vino o licores– el consenso general sugiere que su consumo sea moderado."
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Haz ejercicio fisico diario."  Margin="20,0,0,0" FontSize="Body" TextColor="Black"/>
+                <Label Text="Para las personas que tienen trabajos o estilos de vida más sedentarios, la recomendación general es hacer al menos 30 minutos de ejercicio diario."
+                       FontSize="Body" Margin="20,0,20,0"/>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

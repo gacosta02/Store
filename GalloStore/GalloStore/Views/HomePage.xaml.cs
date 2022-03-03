@@ -17,10 +17,21 @@ namespace GalloStore.Views
         {
             InitializeComponent();
             this.BindingContext = new HomeViewModel();
+
             MoverPage.Clicked += (sender, e) =>
             {
 
-                Navigation.PushAsync(new BienvenidaPage());
+                Navigation.PushAsync(new VerMasPrimeraPage());
+            };
+
+            VerPage.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new VerMasSegundaPage());
+            };
+
+            MostrarPage.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new VerMasTerceraPage());
             };
         }
 

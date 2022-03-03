@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalloStore.Views.VerMasPrimeraPage"
+             Title="Volver">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+
+
+                <Image Source="Aviso.png" WidthRequest="350" Margin="0,20,0,0"/>
+                <Label Text="¿Que encontraras aqui?" FontSize="Title"   Margin="60,10,20,10" TextColor="Gray"/>
+
+                <Label Text="Es facil, rapido y conveniente para ti, gracias a las nuevas tecnologias 
+  los consumidores buscan soluciones que le permitan obtener todo con un solo click, pues aqui encontraste tu solucion, te ofrecemos:" 
+                   Margin="20,0,20,0" FontSize="Body"/>
+                <Label Text="  &#x2022; Los mejores precios. " Margin="20,0,0,0" FontSize="Body" TextColor="Black"/>
+                <Label Text="Obtendras los productos de la canasta familiar a un precio asequible, siempre ofreciendote lo mejor de acuerdo a tus necesidades ayudandote a obtener una mejor calidad de vida. Dirigete  a nuestro catalogo para poder apreciar"
+                       FontSize="Body" Margin="20,0,20,0" />
+                <Label Text="  &#x2022; Productos de Calidad." Margin="20,0,0,0" FontSize="Body" TextColor="Black"/>
+                <Label Text="Nuestros Productos estan sometidos a revisiones diarias, manteniendolos en el mejor ambiente de acuerdo a los requerido dependiendo el tipo de producto, puede estar 100% seguro de que su producto se le entregara en excelentes condiciones."
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Variedad de opciones en un solo clic." Margin="20,0,0,0" FontSize="Body" TextColor="Black"/>
+                <Label Text="Gracias a que la tecnologia ha evolucionado no tienes necesidad de caminar hasta el establecimiento, nosotros te lo llevamos a tu hogar, solo entrando a nuestro catalogo puedes escoger la variedad de productos que desees"
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Empaque Biodegradable"  Margin="20,0,0,0" FontSize="Body" TextColor="Black"/>
+                <Label Text="Nosotros como empresa estamos dispuesto siempre a mejorar la calidad de vida de nuestros clientes y del planeta, conservando el medio ambiente y Ayudando a tener un pais menos contaminado."
+                       FontSize="Body" Margin="20,0,20,0"/>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

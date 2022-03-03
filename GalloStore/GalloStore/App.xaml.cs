@@ -17,6 +17,7 @@ namespace GalloStore
             //MainPage = new RegistroPage();
             MainPage = new NavigationPage(new MenuTabbedPage());
             //MainPage = new HomePage();
+            
         }
 
         protected override void OnStart()

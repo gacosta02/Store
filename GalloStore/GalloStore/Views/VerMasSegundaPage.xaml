@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalloStore.Views.VerMasSegundaPage"
+             Title="Volver">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+
+                <Image Source="Organizar.png" WidthRequest="350" Margin="0,20,0,0"/>
+                <Label Text="¿Como Organizar los Productos?" FontSize="Title"   Margin="40,10,20,10" TextColor="Gray"/>
+
+                <Label Text="Los productos tienen una manera de almcenarse, si no sabes, aqui tienes algunas recomendaciones:"
+                       FontSize="Body" Margin="10,0,5,0"/>
+                <Label Text="  &#x2022; Temperatura Adecuada." Margin="20,0,0,0" FontSize="Body" />
+                <Label Text="  &#x2022; Usar bolsas Hermeticas o contenedores de cristal." Margin="20,0,0,0" FontSize="Body" />
+                <Label Text="  &#x2022; Mantener espacio entre cada producto. " Margin="20,0,0,0" FontSize="Body"/>
+                <Label Text="  &#x2022; Los Alimentos no deben tocar las Paredes del Refrigerador. " Margin="20,0,0,0" FontSize="Body"/>
+                
+                <Label Text="La organizacion en el refrigerador es vital por eso necesitas seguir los siguientes consejos:" 
+                   Margin="5,0,5,0" FontSize="Body"/>
+                <Label Text="  &#x2022; Puerta " TextColor="Black" Margin="20,0,0,0" FontSize="Body"/>
+                <Label Text="Es la zona menos fría y, por tanto, el lugar ideal para huevos, cátsup, mostaza, aderezos, mantequillas y mermeladas, y bebidas como agua, jugos, leche y vinos."
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Parte Superior" TextColor="Black" Margin="20,0,0,0" FontSize="Body"/>
+                <Label Text="Es el lugar de los productos listos para consumo como pastas ya cocinadas o embutidos. Coloca también ahí las semiconservas o productos que no estén esterilizados. Procura siempre colocar arriba lo que esté más próximo a caducar, para que lo tengas a la vista y lo consumas antes."
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Zona Media" TextColor="Black" Margin="20,0,0,0" FontSize="Body"/>
+                <Label Text="Aquí se colocan los lácteos como quesos, leche o yogures que no necesiten tanto frío, así como productos con el paquete abierto, conservas o comida ya cocinada de otros días.."
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Zona Baja" TextColor="Black"  Margin="20,0,0,0" FontSize="Body"/>
+                <Label Text="Espacio para almacenar carnes crudas como la de res, aves y pescados, pues son alimentos que requieren temperaturas estables y frías."
+                       FontSize="Body" Margin="20,0,20,0"/>
+                <Label Text="  &#x2022; Cajones" TextColor="Black"  Margin="20,0,0,0" FontSize="Body"/>
+                <Label Text="Sirven para almacenar las verduras de todo tipo y las frutas que requieran refrigeración. Procura hacerlo siempre sin bolsas de plástico, redecillas o cartones, pues necesitan respirar."
+                       FontSize="Body" Margin="20,0,20,0"/>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
