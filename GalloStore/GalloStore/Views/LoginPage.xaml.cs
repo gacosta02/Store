@@ -39,13 +39,13 @@ namespace GalloStore.Views
                 }
                 else if (string.IsNullOrEmpty(lm) || string.IsNullOrEmpty(dm))
                 {
-                    _ = DisplayAlert("Error", "El campo Asunto esta vacio", "OK");
+                    _ = DisplayAlert("Advertencia", "Campo Vacio", "OK");
 
 
                 }
                 else
                 {
-                    _ = DisplayAlert("Error", "Usuario o Contraseña incorrecta", "OK");
+                    _ = DisplayAlert("Advertencia", "Usuario o Contraseña incorrecta", "OK");
                 }
 
                

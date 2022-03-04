@@ -28,7 +28,7 @@ namespace GalloStore.Views
 
             if (string.IsNullOrEmpty(id))
             {
-                _ = DisplayAlert("Error", "El campo Asunto esta vacio", "OK");
+                _ = DisplayAlert("Advertencia", "El campo Asunto esta vacio", "OK");
             }
             else
             {

@@ -6,11 +6,11 @@
         <StackLayout VerticalOptions="CenterAndExpand">
 
             <Image Source="Logo.jpg" HeightRequest="100" WidthRequest="40"  ></Image>
-            <Entry Placeholder="Nombre de Usuario" PlaceholderColor="Gray" Margin="20,10,20,0" />
-            <Entry Placeholder="Celular" PlaceholderColor="Gray" Margin="20,0"/>
-            <Entry Placeholder="Direccion" PlaceholderColor="Gray" Margin="20,0"/>
-            <Entry Placeholder="Contraseña" PlaceholderColor="Gray" Margin="20,0" IsPassword="True" />
-            <Button Text="Registrar" FontSize="Body" Margin="30,10,30,0" BackgroundColor="#2196F3" CornerRadius="10"></Button>
+            <Entry Placeholder="Nombre de Usuario" x:Name="NombreUsuario" PlaceholderColor="Gray" Margin="20,10,20,0" />
+            <Entry Placeholder="Celular xxx-xxx-xxxx" x:Name="Celular" PlaceholderColor="Gray" Margin="20,0"/>
+            <Entry Placeholder="Direccion: C/Patria #19" x:Name="Direccion"  PlaceholderColor="Gray" Margin="20,0"/>
+            <Entry Placeholder="Contraseña" x:Name="Contraseña_Registro" PlaceholderColor="Gray" Margin="20,0" IsPassword="True" />
+            <Button Text="Registrar" x:Name="Registrar" FontSize="Body" Margin="30,10,30,0" BackgroundColor="#2196F3" CornerRadius="10"></Button>
 
             <Label Text=""
                 VerticalOptions="CenterAndExpand" 
