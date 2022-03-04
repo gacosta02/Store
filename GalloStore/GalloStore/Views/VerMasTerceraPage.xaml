@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-
+ 
 
                 <Image Source="Aviso.png" WidthRequest="350" Margin="0,20,0,0"/>
                 <Label Text="7 habitos pequeños habitos para una alimentacion sostenible" FontSize="Title"   Margin="40,10,20,10" TextColor="Gray"/>

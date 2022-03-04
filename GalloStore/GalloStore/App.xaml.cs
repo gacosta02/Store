@@ -12,10 +12,10 @@ namespace GalloStore
             InitializeComponent();
 
             // MainPage = new MainPage();
-            // MainPage = new BienvenidaPage();
+             MainPage = new NavigationPage (new BienvenidaPage());
             // MainPage = new LoginPage();
             //MainPage = new RegistroPage();
-            MainPage = new NavigationPage(new MenuTabbedPage());
+           // MainPage = new NavigationPage(new MenuTabbedPage());
             //MainPage = new HomePage();
             
         }

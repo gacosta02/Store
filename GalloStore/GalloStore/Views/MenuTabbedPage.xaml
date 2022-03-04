@@ -21,7 +21,7 @@
 
     <NavigationPage Title="Soporte" Icon="Ayuda.png">
         <x:Arguments>
-            <Views:CatalogoPage/>
+            <Views:SoportePage/>
         </x:Arguments>
     </NavigationPage>
 

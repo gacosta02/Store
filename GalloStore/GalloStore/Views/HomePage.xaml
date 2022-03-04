@@ -77,7 +77,7 @@
                     <Button x:Name="VerPage" />
                 </FlexLayout>
             </Frame>
-
+ 
             <Frame WidthRequest="300"
                    HeightRequest="640"
                    Margin="10,20,0,0">

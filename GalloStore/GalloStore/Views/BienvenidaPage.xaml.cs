@@ -17,6 +17,19 @@ namespace GalloStore.Views
         {
             InitializeComponent();
             this.BindingContext = new BienvenidaViewModel();
+
+            Acceder.Clicked += (sender, e) =>
+            {
+
+                Navigation.PushAsync(new LoginPage());
+            };
+
+            Registrar.Clicked += (sender, e) =>
+             {
+                 Navigation.PushAsync(new RegistroPage());
+             };
         }
+
+        
     }
 }
