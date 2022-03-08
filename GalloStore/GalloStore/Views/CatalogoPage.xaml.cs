@@ -23,24 +23,32 @@ namespace GalloStore.Views
             private void TapMenos_Tapped(object sender, EventArgs e)
             {
                 int cantidad = Convert.ToInt32(lblCantidad);
-                if (cantidad > 1)
+             
+
+            if (cantidad > 1)
                 {
 
-                    cantidad -= 1;
+                     cantidad -= 1;
+                  
                     lblCantidad.Text = cantidad.ToString();
-                }
+                   
+
+            }
 
             }
 
             private void TapMas_Tapped(object sender, EventArgs e)
             {
                 int cantidad = Convert.ToInt32(lblCantidad.Text);
-                cantidad += 1;
+               
+                 cantidad += 1;
+                
                 lblCantidad.Text = cantidad.ToString();
-            }
+               
+             }
 
-        
+       
 
-        
+
     }
 }

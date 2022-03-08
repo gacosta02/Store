@@ -25,9 +25,14 @@
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Buzon de Orden" Icon="Orden.png">
+    <NavigationPage Title="Buzon de Orden" Icon="Orden.png" IsEnabled="False">
         <x:Arguments>
             <Views:BuzonPage/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Carrito" Icon="Carrito.png">
+        <x:Arguments>
+            <Views:CarritoPage/>
         </x:Arguments>
     </NavigationPage>
 

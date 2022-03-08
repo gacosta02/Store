@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalloStore.Android", "GalloStore.Android\GalloStore.Android.csproj", "{B35E9938-1056-4E8A-B5B1-F7A49456E01F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalloStore", "GalloStore\GalloStore.csproj", "{295EB233-CA58-41DB-B178-9F0AE3314EE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GalloStore", "GalloStore\GalloStore.csproj", "{295EB233-CA58-41DB-B178-9F0AE3314EE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

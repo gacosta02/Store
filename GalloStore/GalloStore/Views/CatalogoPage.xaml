@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              x:Class="GalloStore.Views.CatalogoPage"
              Title="Catalogo">
 
@@ -26,15 +26,15 @@
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
 
-                        <Image Grid.Row="0" Source="Ayuda.png" HeightRequest="200"/>
+                        <Image Grid.Row="0" Source="Aceite.png" HeightRequest="200"/>
                         <StackLayout Grid.Row="1">
                             <Label Text="Nombre" x:Name="txtNombre"  TextColor="Black"/>
                         </StackLayout>
-                        <StackLayout  Grid.Row="4">
+                        <StackLayout  Grid.Row="2">
                             <Label Text="Precio" x:Name="txtPrecio"  TextColor="Black"/>
                         </StackLayout>
 
-                        <Grid Grid.Row="5" HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+                        <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
 
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>
@@ -67,21 +67,14 @@
 
 
 
-
-
-
-
-
-
-
                         </Grid>
-                        
+
                     </Grid>
-                    
+
                 </Frame>
-                
+
             </Grid>
-           
+
         </ScrollView>
 
     </ContentPage.Content>

@@ -16,7 +16,7 @@ namespace GalloStore
             // MainPage = new NavigationPage (new LoginPage());
            // MainPage = new NavigationPage ( new RegistroPage());
            // MainPage = new NavigationPage(new MenuTabbedPage());
-            //MainPage = new HomePage();
+           // MainPage = new HomePage();
             
         }
 
