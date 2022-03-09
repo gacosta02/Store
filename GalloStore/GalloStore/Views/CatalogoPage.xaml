@@ -14,27 +14,37 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Frame Grid.Row="0" Padding="10" Margin="10" HasShadow="True" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                <Frame Grid.Row="0" Padding="10" Margin="10" HasShadow="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="220"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-
-                        <Image Grid.Row="0" Source="Aceite.png" HeightRequest="200"/>
-                        <StackLayout Grid.Row="1">
-                            <Label Text="Nombre" x:Name="txtNombre"  TextColor="Black"/>
-                        </StackLayout>
-                        <StackLayout  Grid.Row="2">
-                            <Label Text="Precio" x:Name="txtPrecio"  TextColor="Black"/>
-                        </StackLayout>
-
-                        <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+                
+                        <CollectionView ItemsSource="{Binding catalogos}"  
+                                    HeightRequest="250">
+                            <CollectionView.ItemsLayout>
+                                <GridItemsLayout Orientation="Vertical" Span="0" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="220"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Grid.Row="0" Source="{Binding Picture}" HeightRequest="200"/>
+                                    <StackLayout Grid.Row="1">
+                                        <Label Text="Nombre" x:Name="{Binding Name}"  TextColor="Black"/>
+                                    </StackLayout>
+                                    <StackLayout  Grid.Row="2">
+                                        <Label Text="Precio" x:Name="{Binding Price}"  TextColor="Black"/>
+                                    </StackLayout>
+                                </Grid>
+                            </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                        <!--<Grid Grid.Row="3" HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
 
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>
@@ -67,9 +77,9 @@
 
 
 
-                        </Grid>
+                        </Grid>-->
 
-                    </Grid>
+                    <!--</Grid>-->
 
                 </Frame>
 

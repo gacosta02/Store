@@ -22,6 +22,7 @@ namespace GalloStore.Views
             {
 
                 Navigation.PushAsync(new LoginPage());
+                
             };
 
             Registrar.Clicked += (sender, e) =>

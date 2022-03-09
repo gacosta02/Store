@@ -4,6 +4,7 @@
             xmlns:Views= "clr-namespace:GalloStore.Views" 
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
               android:TabbedPage.ToolbarPlacement="Bottom"
+            NavigationPage.HasNavigationBar="False"
              x:Class="GalloStore.Views.MenuTabbedPage">
   <!--Pages can be added as references or inline-->
 
@@ -25,7 +26,7 @@
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Buzon de Orden" Icon="Orden.png" IsEnabled="False">
+    <NavigationPage Title="Buzon de Orden" Icon="Orden.png" x:Name="BuzonVoz"> 
         <x:Arguments>
             <Views:BuzonPage/>
         </x:Arguments>
