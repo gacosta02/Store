@@ -25,7 +25,7 @@ namespace GalloStore.Views
 
                 //Navigation.PushAsync(new MenuTabbedPage());
 
-                String id = "Admin";
+                String id = "admin";
                // String mc = "123";
                 var user =  ("admin","rachely");
                 var pwd = ("1234", "1234");
@@ -33,30 +33,31 @@ namespace GalloStore.Views
                 string lm = Usuario.Text;
                 string dm = Contraseña.Text;
 
-                if (string.IsNullOrEmpty(lm) || string.IsNullOrEmpty(dm))
-                {
-                    _ = DisplayAlert("Advertencia", "Campo Vacio", "OK");
+                //if (string.IsNullOrEmpty(lm) || string.IsNullOrEmpty(dm))
+                //{
+                //    _ = DisplayAlert("Advertencia", "Campo Vacio", "OK");
 
 
-                }
+                //}
 
-               else if (lm == user.Item1 && dm == pwd.Item1 )
-                {
+               //else if (lm == user.Item1 && dm == pwd.Item1 )
+               // {
                     Navigation.PushAsync(new MenuTabbedPage());
                     Usuario.Text = "";
                     Contraseña.Text = "";
-                    Preferences.Set("Admin", id);
-                }
-                else if (lm == user.Item2 && dm == pwd.Item2)
-                {
-                    Navigation.PushAsync(new MenuTabbedPage());
-                    Usuario.Text = "";
-                    Contraseña.Text = "";
-                }
-                else
-                {
-                    _ = DisplayAlert("Advertencia", "Usuario o Contraseña incorrecta", "OK");
-                }
+                    Preferences.Set("admin", id);
+                    
+                //}
+                //else if (lm == user.Item2 && dm == pwd.Item2)
+                //{
+                //    Navigation.PushAsync(new MenuTabbedPage());
+                //    Usuario.Text = "";
+                //    Contraseña.Text = "";
+                //}
+                //else
+                //{
+                //    _ = DisplayAlert("Advertencia", "Usuario o Contraseña incorrecta", "OK");
+                //}
                 
                 
 

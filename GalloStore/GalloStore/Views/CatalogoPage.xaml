@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="GalloStore.Views.CatalogoPage"
-             Title="Catalogo">
+             Title="Catalogo"
+             x:Name="CatPage">
 
     <ContentPage.Content>
 
@@ -16,9 +17,9 @@
 
                 <Frame Grid.Row="0" Padding="10" Margin="10" HasShadow="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-                
-                        <CollectionView ItemsSource="{Binding catalogos}"  
-                                    HeightRequest="250">
+
+                    <CollectionView ItemsSource="{Binding catalogo}"  
+                                    HeightRequest="250" x:Name="colletion">
                             <CollectionView.ItemsLayout>
                                 <GridItemsLayout Orientation="Vertical" Span="1" />
                             </CollectionView.ItemsLayout>
@@ -27,9 +28,6 @@
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="220"/>
-                                        <RowDefinition Height="auto"/>
-                                        <RowDefinition Height="auto"/>
-                                        <RowDefinition Height="auto"/>
                                         <RowDefinition Height="auto"/>
                                         <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
@@ -49,7 +47,7 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                       <!-- <StackLayout Grid.Column="0" Background="#D0D0D0" HeightRequest="40" VerticalOptions="Center">
+                                        <StackLayout Grid.Column="0" Background="#D0D0D0" HeightRequest="40" VerticalOptions="Center">
                                             <StackLayout.GestureRecognizers>
                                                 <TapGestureRecognizer x:Name="TapMenos" Tapped="TapMenos_Tapped"/>
                                             </StackLayout.GestureRecognizers>
@@ -65,10 +63,12 @@
                                                 <TapGestureRecognizer x:Name="TapMas" Tapped="TapMas_Tapped"/>
                                             </StackLayout.GestureRecognizers>
                                             <Label Text="+" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="40"/>
-                                        </StackLayout>-->
+                                        </StackLayout>
 
                                         <StackLayout Grid.Column="3" Background="#9C2424" HeightRequest="40" VerticalOptions="Center">
-                                            <Button Grid.Column="3" x:Name="btnAgregarBolsa"  Text="Agregar al Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" HorizontalOptions="FillAndExpand" />
+                                            <Button Grid.Column="3"   Text="Agregar al Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" HorizontalOptions="FillAndExpand" 
+                                                    Command="{Binding AgregarCommand, Source={x:Reference CatPage}}"
+                                                    CommandParameter="{Binding .}"/>
                                         </StackLayout>
 
 
@@ -81,42 +81,6 @@
 
                     
 
-                    <!--<Grid Grid.Row="3" HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
-
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="30"/>
-                                <ColumnDefinition Width="30"/>
-                                <ColumnDefinition Width="30"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <StackLayout Grid.Column="0" Background="#D0D0D0" HeightRequest="40" VerticalOptions="Center">
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer x:Name="TapMenos" Tapped="TapMenos_Tapped"/>
-                                </StackLayout.GestureRecognizers>
-                                <Label Text="-" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="40"/>
-                            </StackLayout>
-
-                            <StackLayout Grid.Column="1" HeightRequest="40" VerticalOptions="Center" >
-                                <Label x:Name="lblCantidad" Text="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="40"/>
-                            </StackLayout>
-
-                            <StackLayout Grid.Column="2" Background="#D0D0D0" HeightRequest="40" VerticalOptions="Center">
-                                <StackLayout.GestureRecognizers>
-                                    <TapGestureRecognizer x:Name="TapMas" Tapped="TapMas_Tapped"/>
-                                </StackLayout.GestureRecognizers>
-                                <Label Text="+" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="40"/>
-                            </StackLayout>
-
-                            <StackLayout Grid.Column="3" Background="#9C2424" HeightRequest="40" VerticalOptions="Center">
-                                <Button Grid.Column="3" x:Name="btnAgregarBolsa"  Text="Agregar al Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" HorizontalOptions="FillAndExpand" />
-                            </StackLayout>
-
-
-
-                        </Grid>-->
-
-                    <!--</Grid>-->
 
                 </Frame>
 

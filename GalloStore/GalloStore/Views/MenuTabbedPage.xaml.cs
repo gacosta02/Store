@@ -17,11 +17,13 @@ namespace GalloStore.Views
             InitializeComponent();
         }
 
+
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            bool hasKey = Preferences.ContainsKey("Admin");
-            if (hasKey)
+            bool haskey = Preferences.ContainsKey("admin");
+            if (haskey)
             {
                 BuzonVoz.IsEnabled = false;
                 BuzonVoz.IsVisible = false;

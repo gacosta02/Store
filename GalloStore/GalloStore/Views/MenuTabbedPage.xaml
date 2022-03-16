@@ -6,7 +6,8 @@
               android:TabbedPage.ToolbarPlacement="Bottom"
             NavigationPage.HasNavigationBar="False"
              x:Class="GalloStore.Views.MenuTabbedPage">
-  <!--Pages can be added as references or inline-->
+    
+          <!--Pages can be added as references or inline-->
 
     <NavigationPage Title="Home" Icon="Casa.png">
         <x:Arguments>
@@ -26,9 +27,10 @@
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Buzon de Orden" Icon="Orden.png" x:Name="BuzonVoz"> 
+    <NavigationPage Title="Buzon de Orden" Icon="Orden.png" x:Name="BuzonVoz" > 
         <x:Arguments>
-            <Views:BuzonPage/>
+            <Views:BuzonPage   />
+            
         </x:Arguments>
     </NavigationPage>
     <NavigationPage Title="Carrito" Icon="Carrito.png">

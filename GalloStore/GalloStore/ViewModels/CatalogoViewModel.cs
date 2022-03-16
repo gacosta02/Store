@@ -10,10 +10,10 @@ namespace GalloStore.ViewModels
 
       public  class CatalogoViewModel
       {
-        public ObservableCollection<Catalogo> catalogos { get; set; }
+        public ObservableCollection<Catalogo> catalogo { get; set; }
         public CatalogoViewModel()
         {
-            catalogos = new ObservableCollection<Catalogo>
+            catalogo = new ObservableCollection<Catalogo>
             {
                 new Catalogo {  Picture = "Aceite.png" , Name ="Aceite Crisol", Price = 20  },
                 new Catalogo {  Picture = "Agua.png", Name ="Agua", Price = 25  },
@@ -29,6 +29,7 @@ namespace GalloStore.ViewModels
                 new Catalogo {  Picture = "Platano.png", Name ="Platano", Price = 25 },
             };
 
+            
         }
 
 
