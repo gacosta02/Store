@@ -6,8 +6,13 @@
              x:Name="CarPage">
     <ContentPage.Content>
 
-        <ScrollView>
+        
 
+        <ScrollView>
+            <!--<StackLayout>
+                <Label Text="Total a pagar:" TextColor="Black" Margin="10,10,0,70"/>
+            </StackLayout>-->
+        
             <Grid HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
 
                 <Grid.RowDefinitions>
@@ -15,26 +20,36 @@
                 </Grid.RowDefinitions>
 
                 <!--<Frame Grid.Row="0" Padding="10" Margin="10" HasShadow="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">-->
+                
 
-
-                    <CollectionView ItemsSource="{Binding catalogo}"  
-                                    HeightRequest="250" >
+                <CollectionView ItemsSource="{Binding catalogo}"  
+                                    HeightRequest="250" x:Name="collecTest">
                         <CollectionView.ItemsLayout>
                             <GridItemsLayout Orientation="Vertical" Span="1" />
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
+                                
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="220"/>
                                         <RowDefinition Height="auto"/>
                                         <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
-                                    <Image Grid.Row="0" Source="{Binding Picture}" HeightRequest="200"/>
-                                    <StackLayout Grid.Row="1">
+                                 
+                                <StackLayout Margin="5,10,0,10">
+
+                                   
+                                    <Label Text="{Binding total}" TextColor="Black"/>
+
+                                </StackLayout>
+                                <Image Grid.Row="0" Source="{Binding Picture}" HeightRequest="200" />
+                                <StackLayout Grid.Row="1" HorizontalOptions="Center" Orientation="Horizontal">
+                                    <Label Text="Nombre: "  TextColor="Black" FontAttributes="Bold"/>
                                         <Label Text="{Binding Name}"  TextColor="Black"/>
                                     </StackLayout>
-                                    <StackLayout  Grid.Row="2">
+                                <StackLayout  Grid.Row="2" HorizontalOptions="Center" Orientation="Horizontal">
+                                    <Label Text="Precio: "  TextColor="Black" FontAttributes="Bold"/>
                                         <Label Text="{Binding Price}"  TextColor="Black"/>
                                     </StackLayout>
                                     <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
@@ -46,27 +61,12 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <StackLayout Grid.Column="0" Background="#D0D0D0" HeightRequest="40" VerticalOptions="Center">
-                                            <StackLayout.GestureRecognizers>
-                                                <TapGestureRecognizer x:Name="TapMenos" />
-                                            </StackLayout.GestureRecognizers>
-                                            <Label Text="-" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="40"/>
-                                        </StackLayout>
+                                       
 
-                                        <StackLayout Grid.Column="1" HeightRequest="40" VerticalOptions="Center" >
-                                            <Label x:Name="lblCantidad"  Text="1"   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="40"/>
-                                        </StackLayout>
-
-                                        <StackLayout Grid.Column="2" Background="#D0D0D0" HeightRequest="40" VerticalOptions="Center">
-                                            <StackLayout.GestureRecognizers>
-                                                <TapGestureRecognizer x:Name="TapMas" />
-                                            </StackLayout.GestureRecognizers>
-                                            <Label Text="+" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="40"/>
-                                        </StackLayout>
-
-                                        <StackLayout Grid.Column="3" Background="#9C2424" HeightRequest="40" VerticalOptions="Center">
-                                            <Button Grid.Column="3"   Text="Agregar al Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" HorizontalOptions="FillAndExpand" 
-                                                    Command="{Binding AgregarCommand, Source={x:Reference CarPage}}"
+                                        <StackLayout Grid.Column="3" Background="#9C2424" HeightRequest="40" HorizontalOptions="CenterAndExpand"
+                                                     Margin="0,0,85,20" Orientation="Horizontal">
+                                        <Button Grid.Column="3"   Text="Eliminar del Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" 
+                                        Command="{Binding EliminarCommand, Source={x:Reference CarPage}}"
                                                     CommandParameter="{Binding .}"/>
                                         </StackLayout>
 

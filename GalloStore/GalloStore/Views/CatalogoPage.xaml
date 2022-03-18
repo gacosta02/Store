@@ -32,10 +32,12 @@
                                         <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
                                     <Image Grid.Row="0" Source="{Binding Picture}" HeightRequest="200"/>
-                                    <StackLayout Grid.Row="1">
+                                    <StackLayout Grid.Row="1"  HorizontalOptions="Center" Orientation="Horizontal">
+                                        <Label Text="Nombre: "  TextColor="Black" FontAttributes="Bold"/>
                                         <Label Text="{Binding Name}"  TextColor="Black"/>
                                     </StackLayout>
-                                    <StackLayout  Grid.Row="2">
+                                    <StackLayout  Grid.Row="2" HorizontalOptions="Center" Orientation="Horizontal">
+                                        <Label Text="Precio: "  TextColor="Black" FontAttributes="Bold"/>
                                         <Label Text="{Binding Price}"  TextColor="Black"/>
                                     </StackLayout>
                                     <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
@@ -47,28 +49,12 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <StackLayout Grid.Column="0" Background="#D0D0D0" HeightRequest="40" VerticalOptions="Center">
-                                            <StackLayout.GestureRecognizers>
-                                                <TapGestureRecognizer x:Name="TapMenos" Tapped="TapMenos_Tapped"/>
-                                            </StackLayout.GestureRecognizers>
-                                            <Label Text="-" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="40"/>
-                                        </StackLayout>
 
-                                        <StackLayout Grid.Column="1" HeightRequest="40" VerticalOptions="Center" >
-                                            <Label x:Name="lblCantidad"  Text="1"   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="40"/>
-                                        </StackLayout>
 
-                                        <StackLayout Grid.Column="2" Background="#D0D0D0" HeightRequest="40" VerticalOptions="Center">
-                                            <StackLayout.GestureRecognizers>
-                                                <TapGestureRecognizer x:Name="TapMas" Tapped="TapMas_Tapped"/>
-                                            </StackLayout.GestureRecognizers>
-                                            <Label Text="+" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" HeightRequest="40"/>
-                                        </StackLayout>
-
-                                        <StackLayout Grid.Column="3" Background="#9C2424" HeightRequest="40" VerticalOptions="Center">
-                                            <Button Grid.Column="3"   Text="Agregar al Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" HorizontalOptions="FillAndExpand" 
+                                        <StackLayout Grid.Column="3" Background="#9C2424" HeightRequest="40" HorizontalOptions="CenterAndExpand" Margin="0,0,90,20" Orientation="Horizontal">
+                                            <Button Grid.Column="3"   Text="Agregar al Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" HorizontalOptions="CenterAndExpand" 
                                                     Command="{Binding AgregarCommand, Source={x:Reference CatPage}}"
-                                                    CommandParameter="{Binding .}"/>
+                                                    CommandParameter="{Binding .}"/>  
                                         </StackLayout>
 
 

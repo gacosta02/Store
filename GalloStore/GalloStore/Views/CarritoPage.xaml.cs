@@ -16,52 +16,65 @@ namespace GalloStore.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CarritoPage : ContentPage
     {
+        Command _EliminarCommand;
+
+        public Command EliminarCommand => _EliminarCommand ??
+            (_EliminarCommand = new Command(EliminarSync));
+
+
         public ObservableCollection<Catalogo> catalogo { get; set; }
         public CarritoPage()
         {
             InitializeComponent();
-            this.BindingContext = new CarritoViewModel();
+           // this.BindingContext = new CarritoViewModel();
             Barrel.ApplicationId = "store";
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            this.BindingContext = new CarritoViewModel();
-            //CargarData();
+           // this.BindingContext = new CarritoViewModel();
+            CargarData();
         }
 
-        //private void CargarData()
-       // {
-        //    var url = "catalogo";
-        //    if (!Barrel.Current.IsExpired(key: url))
-        //    {
-        //        var result = Barrel.Current.Get<List<Catalogo>>(key: url);
+        private void EliminarSync(object obj)
+        {
+          // var jalsf = DisplayAlert("Eliminar", "Desea elminar este producto", "OK", "Cancel");
+            var url = "catalogo";
 
-        //        var addData = new List<Catalogo>();
-        //        foreach (var item in result)
-        //        {
-        //            addData.Add(item);
-        //        }
-              
-
-
-
-        //        Barrel.Current.Add(key: url, data: addData, expireIn: TimeSpan.FromDays(200));
-
-        //        foreach (var item in addData)
-        //        {
-        //            catalogo = new ObservableCollection<Catalogo> {
-        //        new Catalogo {
-        //            Price = item.Price, Name = item.Name, Picture = item.Picture
-        //        } };
-
-               
-        //        }
-               
+            var result = Barrel.Current.Get<List<Catalogo>>(key: url);
+            var catalogo = (Catalogo)obj;
+            var productoBorrado = result.Where(x => x.Name == catalogo.Name).FirstOrDefault();
+            result.Remove(productoBorrado);
+            DisplayAlert("Eliminar", $"{productoBorrado.Name} eliminado satisfactoriamente", "ok");
+            Barrel.Current.Add(key: url, data: result, expireIn: TimeSpan.FromDays(200));
+            CargarData();
+           
 
 
-        //    }
-        //}
+
+        }
+
+
+        public void CargarData()
+        {
+            var url = "catalogo";
+            if (!Barrel.Current.IsExpired(key: url))
+            {
+                var result = Barrel.Current.Get<List<Catalogo>>(key: url);
+
+                var addData = new List<Catalogo>();
+                foreach (var item in result)
+                {
+                    addData.Add(item);
+                }
+                Barrel.Current.Add(key: url, data: addData, expireIn: TimeSpan.FromDays(200));
+                catalogo = new ObservableCollection<Catalogo>(addData);
+
+                collecTest.ItemsSource = catalogo;
+            }
+
+
+        }
     }
 }

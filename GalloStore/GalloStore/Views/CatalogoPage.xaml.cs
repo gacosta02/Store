@@ -24,23 +24,25 @@ namespace GalloStore.Views
 
 
         Command _AgregarCommand;
+       
         public Command AgregarCommand => _AgregarCommand ?? 
             (_AgregarCommand = new Command(AgregarSync));
 
-        //private async Task AgregarSync()
-        //{
-        //    var select = colletion.SelectedItem;
-        //    var selects = colletion.SelectedItems;
-        //    await DisplayAlert("test", "asfa","Cancel");
-        //}
+        
+
+        
 
         private void  AgregarSync(object obj)
         {
             var url = "catalogo";
             var catalogo = new List<Catalogo>();
             catalogo.Add((Catalogo)obj);
-
-            Barrel.Current.Add(key: url, data: catalogo, expireIn: TimeSpan.FromDays(200));
+            
+            var result = Barrel.Current.Get<List<Catalogo>>(key: url);
+            
+            result.Add((Catalogo)obj);
+            DisplayAlert("Agregar", "Producto Agregado satisfactoriamente", "ok");
+            Barrel.Current.Add(key: url, data: result, expireIn: TimeSpan.FromDays(200));
         }
         public CatalogoPage()
         {
@@ -51,14 +53,16 @@ namespace GalloStore.Views
 
         }
 
-        private void TapMenos_Tapped(object sender, EventArgs e)
-        {
-           
-        }
+       
 
-        private void TapMas_Tapped(object sender, EventArgs e)
-        {
+        //private void TapMas_Tapped(object sender, EventArgs e)
+        //{
 
-        }
+        //}
+
+        //private void TapMenos_Tapped(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }
