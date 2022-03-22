@@ -32,41 +32,41 @@ namespace GalloStore.Views
                 
                 string lm = Usuario.Text;
                 string dm = Contraseña.Text;
-
-                if (string.IsNullOrEmpty(lm) || string.IsNullOrEmpty(dm))
-                {
-                    _ = DisplayAlert("Advertencia", "Campo Vacio", "OK");
-
-
-                }
-
-                else if (lm == user.Item1 && dm == pwd.Item1)
-                {
-                    Navigation.PushAsync(new MenuTabbedPage());
-                    Usuario.Text = "";
-                    Contraseña.Text = "";
-                    Preferences.Set("admin", id);
-
-            }
-                else if (lm == user.Item2 && dm == pwd.Item2)
-            {
-                Navigation.PushAsync(new MenuTabbedPage());
-                Usuario.Text = "";
-                Contraseña.Text = "";
-            }
-            else
-            {
-                _ = DisplayAlert("Advertencia", "Usuario o Contraseña incorrecta", "OK");
-            }
+                Navigation.PushAsync(new MenuUserTabbedPage());
+                //if (string.IsNullOrEmpty(lm) || string.IsNullOrEmpty(dm))
+                //{
+                //    _ = DisplayAlert("Advertencia", "Campo Vacio", "OK"); 
 
 
+                //}
+
+                //else if (lm == user.Item1 && dm == pwd.Item1)
+                //{
+                // Navigation.PushAsync(new MenuTabbedPage());
+                //        Usuario.Text = "";
+                //        Contraseña.Text = "";
+                //        Preferences.Set("admin", id);
+
+                //}
+                //    else if (lm == user.Item2 && dm == pwd.Item2)
+                //{
+                //    Navigation.PushAsync(new MenuTabbedPage());
+                //    Usuario.Text = "";
+                //    Contraseña.Text = "";
+                //}
+                //else
+                //{
+                //    _ = DisplayAlert("Advertencia", "Usuario o Contraseña incorrecta", "OK");
+                //}
 
 
 
 
 
 
-        };
+
+
+            };
         }
 
         

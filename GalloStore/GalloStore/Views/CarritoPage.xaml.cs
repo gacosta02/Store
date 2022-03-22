@@ -22,6 +22,7 @@ namespace GalloStore.Views
             (_EliminarCommand = new Command(EliminarSync));
 
 
+        public int PriceCalculator { get; set; } = 0;
         public ObservableCollection<Catalogo> catalogo { get; set; }
         public CarritoPage()
         {
@@ -33,13 +34,12 @@ namespace GalloStore.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-           // this.BindingContext = new CarritoViewModel();
             CargarData();
+            CargarTotal();
         }
 
         private void EliminarSync(object obj)
         {
-          // var jalsf = DisplayAlert("Eliminar", "Desea elminar este producto", "OK", "Cancel");
             var url = "catalogo";
 
             var result = Barrel.Current.Get<List<Catalogo>>(key: url);
@@ -49,6 +49,7 @@ namespace GalloStore.Views
             DisplayAlert("Eliminar", $"{productoBorrado.Name} eliminado satisfactoriamente", "ok");
             Barrel.Current.Add(key: url, data: result, expireIn: TimeSpan.FromDays(200));
             CargarData();
+            CargarTotal();
            
 
 
@@ -73,8 +74,24 @@ namespace GalloStore.Views
 
                 collecTest.ItemsSource = catalogo;
             }
+        }
+
+            private void CargarTotal()
+            {
+                var url = "catalogo";
+                var result = Barrel.Current.Get<List<Catalogo>>(key: url);
 
 
+                foreach (var item in result)
+                {
+                TxtTotal.Text = "";
+                PriceCalculator += item.Price;
+
+               
+                }
+                TxtTotal.Text = PriceCalculator.ToString();
+                 PriceCalculator = 0;
+           
+        }
         }
     }
-}

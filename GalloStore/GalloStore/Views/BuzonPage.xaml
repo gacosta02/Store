@@ -2,15 +2,76 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GalloStore.Views.BuzonPage"
-             Title="Buzon de Orden" >
+             Title="Buzon de Orden" 
+             x:Name="BuzPage">
 
 
   <!--  Page can be added as references or inline-->
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Recibir las informaciones"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"  />
-        </StackLayout>
+        <!--<StackLayout>-->
+            <Grid ColumnDefinitions="AUTO" RowDefinitions="AUTO, AUTO,AUTO" HorizontalOptions="FillAndExpand" Margin="0,20,0,0" RowSpacing="0" VerticalOptions="FillAndExpand">
+                <Label Text="Factura" Grid.Row="0" FontAttributes="Bold" FontSize="Large"/>
+                <CollectionView ItemsSource="{Binding catalogo}"  
+                                     x:Name="collecTest" Grid.Row="1" HeightRequest="600">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Orientation="Vertical" Span="1" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+
+                                <Grid.RowDefinitions>
+                                    <!--<RowDefinition Height="220"/>-->
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+
+                                <StackLayout Margin="5,10,0,10">
+
+
+                                    <Label Text="{Binding total}" TextColor="Black"/>
+
+                                </StackLayout>
+                                <!--<Image Grid.Row="0" Source="{Binding Picture}" HeightRequest="200" />-->
+                                <StackLayout Grid.Row="1" HorizontalOptions="Center" Orientation="Horizontal">
+                                    <Label Text="Nombre: "  TextColor="Black" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Name}"  TextColor="Black"/>
+                                </StackLayout>
+                                <StackLayout  Grid.Row="2" HorizontalOptions="Center" Orientation="Horizontal">
+                                    <Label Text="Precio: "  TextColor="Black" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Price}"  TextColor="Black"/>
+                                </StackLayout>
+                                <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+
+
+                                    <StackLayout Grid.Column="3" Background="#9C2424" HeightRequest="40" HorizontalOptions="CenterAndExpand"
+                                                     Margin="0,0,85,20" Orientation="Horizontal">
+                                        <!--<Button Grid.Column="3"   Text="Eliminar del Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" 
+                                        Command="{Binding EliminarCommand, Source={x:Reference BuzPage}}"
+                                                    CommandParameter="{Binding .}"/>-->
+                                    </StackLayout>
+
+
+
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            <StackLayout Grid.Row="3" HorizontalOptions="Center" Orientation="Horizontal">
+                <Label Text="Total: "  TextColor="Black" FontAttributes="Bold"/>
+                <Label x:Name="TxtTotal"  TextColor="Black"/>
+            </StackLayout>
+        </Grid>
+          
+        <!--</StackLayout>-->
     </ContentPage.Content>
 </ContentPage>

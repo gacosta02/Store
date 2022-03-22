@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:Views= "clr-namespace:GalloStore.Views" 
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+              android:TabbedPage.ToolbarPlacement="Bottom"
+            NavigationPage.HasNavigationBar="False"
+             x:Class="GalloStore.Views.MenuUserTabbedPage">
+    
+    <NavigationPage Title="Home" Icon="Casa.png">
+        <x:Arguments>
+            <Views:HomePage/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Catalogo" Icon="Catalogo.png">
+        <x:Arguments>
+            <Views:CatalogoPage/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Soporte" Icon="Ayuda.png">
+        <x:Arguments>
+            <Views:SoportePage/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <!--<NavigationPage Title="Buzon de Orden" Icon="Orden.png" x:Name="BuzonVoz" >
+        <x:Arguments>
+            <Views:BuzonPage   />-->
+
+        <!--</x:Arguments>
+    </NavigationPage>-->
+    
+    
+    <NavigationPage Title="Carrito" Icon="Carrito.png">
+        <x:Arguments>
+            <Views:CarritoPage/>
+        </x:Arguments>
+    </NavigationPage>
+
+</TabbedPage>
