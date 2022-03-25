@@ -9,11 +9,11 @@
     
           <!--Pages can be added as references or inline-->
 
-    <NavigationPage Title="Home" Icon="Casa.png">
+    <!--<NavigationPage Title="Home" Icon="Casa.png">
         <x:Arguments>
             <Views:HomePage/>
         </x:Arguments>
-    </NavigationPage>
+    </NavigationPage>-->
     
     <NavigationPage Title="Catalogo" Icon="Catalogo.png">
         <x:Arguments>
@@ -21,11 +21,11 @@
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Soporte" Icon="Ayuda.png">
+    <!--<NavigationPage Title="Soporte" Icon="Ayuda.png">
         <x:Arguments>
             <Views:SoportePage/>
         </x:Arguments>
-    </NavigationPage>
+    </NavigationPage>-->
 
     <NavigationPage Title="Buzon de Orden" Icon="Orden.png" x:Name="BuzonVoz" > 
         <x:Arguments>
@@ -33,11 +33,17 @@
             
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Carrito" Icon="Carrito.png">
+    <NavigationPage Title="Logout" Icon="Salida.png"  >
+        <x:Arguments>
+            <Views:LogoutPage/>
+
+        </x:Arguments>
+    </NavigationPage>
+    <!--<NavigationPage Title="Carrito" Icon="Carrito.png">
         <x:Arguments>
             <Views:CarritoPage/>
         </x:Arguments>
-    </NavigationPage>
+    </NavigationPage>-->
 
 
 </TabbedPage>

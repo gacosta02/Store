@@ -2,16 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              NavigationPage.HasNavigationBar="False"
-             x:Class="GalloStore.Views.RegistroPage">
+             x:Class="GalloStore.Views.RegistroPage"
+             x:Name="RegPage">
     <ContentPage.Content>
         <StackLayout VerticalOptions="CenterAndExpand">
 
             <Image Source="Logo.jpg" HeightRequest="100" WidthRequest="40"  ></Image>
-            <Entry Placeholder="Nombre de Usuario" x:Name="NombreUsuario" PlaceholderColor="Gray" Margin="20,10,20,0" />
-            <Entry Placeholder="Celular xxx-xxx-xxxx" x:Name="Celular" PlaceholderColor="Gray" Margin="20,0"/>
-            <Entry Placeholder="Direccion: C/Patria #19" x:Name="Direccion"  PlaceholderColor="Gray" Margin="20,0"/>
-            <Entry Placeholder="Contraseña" x:Name="Contraseña_Registro" PlaceholderColor="Gray" Margin="20,0" IsPassword="True" />
-            <Button Text="Registrar" x:Name="Registrar" FontSize="Body" Margin="30,10,30,0" BackgroundColor="#2196F3" CornerRadius="10"></Button>
+            <Entry Placeholder="Nombre de Usuario" x:Name="NombreUsuario" PlaceholderColor="Gray" Margin="20,10,20,0" 
+                 Text="{Binding NombreUsuario}" />
+            <Entry Placeholder="Celular xxx-xxx-xxxx" x:Name="Celular" PlaceholderColor="Gray" Margin="20,0" Keyboard="Telephone"
+                   Text="{Binding Celular}"/>
+            <Entry Placeholder="Direccion: C/Patria #19" x:Name="Direccion"  PlaceholderColor="Gray" Margin="20,0"
+                   Text="{Binding Direccion}"/>
+            <Entry Placeholder="Contraseña" x:Name="Contraseña_Registro" PlaceholderColor="Gray" Margin="20,0" IsPassword="True"
+                   Text="{Binding Contrasena}"/>
+            <Button Text="Registrar" x:Name="Registrar" FontSize="Body" Margin="30,10,30,0" BackgroundColor="#2196F3" CornerRadius="10"
+                    Command="{Binding RegistroCommand, Source={x:Reference RegPage}}"
+                    CommandParameter="{Binding .}"/>
 
             <Label Text=""
                 VerticalOptions="CenterAndExpand" 

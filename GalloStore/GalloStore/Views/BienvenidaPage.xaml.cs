@@ -21,13 +21,15 @@ namespace GalloStore.Views
             Acceder.Clicked += (sender, e) =>
             {
 
-                Navigation.PushAsync(new LoginPage());
+               // Navigation.PushAsync(new LoginPage());
+                App.Current.MainPage = new LoginPage();
                 
             };
 
             Registrar.Clicked += (sender, e) =>
              {
-                 Navigation.PushAsync(new RegistroPage());
+                // Navigation.PushAsync(new RegistroPage());
+                 App.Current.MainPage = new RegistroPage();
              };
         }
 

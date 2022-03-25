@@ -25,18 +25,20 @@
         </x:Arguments>
     </NavigationPage>
 
-    <!--<NavigationPage Title="Buzon de Orden" Icon="Orden.png" x:Name="BuzonVoz" >
-        <x:Arguments>
-            <Views:BuzonPage   />-->
-
-        <!--</x:Arguments>
-    </NavigationPage>-->
-    
-    
     <NavigationPage Title="Carrito" Icon="Carrito.png">
         <x:Arguments>
             <Views:CarritoPage/>
         </x:Arguments>
     </NavigationPage>
+
+    <NavigationPage Title="Logout" Icon="Salida.png"  >
+        <x:Arguments>
+            <Views:LogoutPage/>
+
+        </x:Arguments>
+    </NavigationPage>
+    
+    
+    
 
 </TabbedPage>

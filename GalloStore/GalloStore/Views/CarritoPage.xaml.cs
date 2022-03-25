@@ -81,7 +81,10 @@ namespace GalloStore.Views
                 var url = "catalogo";
                 var result = Barrel.Current.Get<List<Catalogo>>(key: url);
 
-
+            if (result == null)
+            {
+                return;
+            }
                 foreach (var item in result)
                 {
                 TxtTotal.Text = "";
@@ -93,5 +96,13 @@ namespace GalloStore.Views
                  PriceCalculator = 0;
            
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            catalogo = new ObservableCollection<Catalogo>();
+
+            collecTest.ItemsSource = catalogo;
+                // mensaje de pedido enviado...
         }
+    }
     }

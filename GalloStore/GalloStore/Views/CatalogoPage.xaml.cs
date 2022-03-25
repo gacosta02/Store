@@ -39,7 +39,11 @@ namespace GalloStore.Views
             catalogo.Add((Catalogo)obj);
             
             var result = Barrel.Current.Get<List<Catalogo>>(key: url);
-            
+            if (result== null)
+            {
+                Barrel.Current.Add(key: url, data: catalogo, expireIn: TimeSpan.FromDays(200));
+                return;
+            }
             result.Add((Catalogo)obj);
             DisplayAlert("Agregar", "Producto Agregado satisfactoriamente", "ok");
             Barrel.Current.Add(key: url, data: result, expireIn: TimeSpan.FromDays(200));

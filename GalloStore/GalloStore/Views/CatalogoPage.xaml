@@ -9,7 +9,7 @@
 
         <ScrollView>
 
-            <Grid HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <Grid  HorizontalOptions="FillAndExpand" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -31,16 +31,16 @@
                                         <RowDefinition Height="auto"/>
                                         <RowDefinition Height="auto"/>
                                     </Grid.RowDefinitions>
-                                    <Image Grid.Row="0" Source="{Binding Picture}" HeightRequest="200"/>
-                                    <StackLayout Grid.Row="1"  HorizontalOptions="Center" Orientation="Horizontal">
+                                    <Image Grid.Row="0" Source="{Binding Picture}" HeightRequest="200" HorizontalOptions="Start" Aspect="AspectFit" />
+                                    <StackLayout Grid.Row="1"  HorizontalOptions="Start" Orientation="Horizontal" >
                                         <Label Text="Nombre: "  TextColor="Black" FontAttributes="Bold"/>
                                         <Label Text="{Binding Name}"  TextColor="Black"/>
                                     </StackLayout>
-                                    <StackLayout  Grid.Row="2" HorizontalOptions="Center" Orientation="Horizontal">
+                                    <StackLayout  Grid.Row="2" HorizontalOptions="Start" Orientation="Horizontal" >
                                         <Label Text="Precio: "  TextColor="Black" FontAttributes="Bold"/>
                                         <Label Text="{Binding Price}"  TextColor="Black"/>
                                     </StackLayout>
-                                    <Grid Grid.Row="3" HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0">
+                                    <Grid Grid.Row="3" HorizontalOptions="Start" ColumnSpacing="0" RowSpacing="0" >
 
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="30"/>
@@ -51,8 +51,8 @@
 
 
 
-                                        <StackLayout Grid.Column="3" Background="#9C2424" HeightRequest="40" HorizontalOptions="CenterAndExpand" Margin="0,0,90,20" Orientation="Horizontal">
-                                            <Button Grid.Column="3"   Text="Agregar al Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" HorizontalOptions="CenterAndExpand" 
+                                        <StackLayout Grid.Column="3" Background="#9C2424" HeightRequest="40" HorizontalOptions="StartAndExpand" Margin="0,0,30,10" Orientation="Horizontal" >
+                                            <Button Grid.Column="3"   Text="Agregar al Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" HorizontalOptions="StartAndExpand" 
                                                     Command="{Binding AgregarCommand, Source={x:Reference CatPage}}"
                                                     CommandParameter="{Binding .}"/>  
                                         </StackLayout>
@@ -63,9 +63,9 @@
                                 </Grid>
                             </DataTemplate>
                             </CollectionView.ItemTemplate>
-                        </CollectionView>
+                     </CollectionView>
 
-                    
+                    <!--<Button Text="Despachar" Grid.Row="2" Clicked="Button_Clicked"/>-->
 
 
                 </Frame>

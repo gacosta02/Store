@@ -61,6 +61,10 @@ namespace GalloStore.Views
             var url = "catalogo";
             var result = Barrel.Current.Get<List<Catalogo>>(key: url);
 
+            if (result == null)
+            {
+                return;
+            }
 
             foreach (var item in result)
             {

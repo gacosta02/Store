@@ -1,4 +1,6 @@
-﻿using GalloStore.ViewModels;
+﻿using GalloStore.Models;
+using GalloStore.ViewModels;
+using MonkeyCache.FileStore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,33 +21,57 @@ namespace GalloStore.Views
         {
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
-
+            Barrel.ApplicationId = "store";
             Acceder.Clicked += (sender, e) =>
             {
 
-                //Navigation.PushAsync(new MenuTabbedPage());
+                string User = Usuario.Text;
+                string Password = Contraseña.Text;
 
-                String id = "admin";
-               // String mc = "123";
-                var user =  ("admin","rachely");
-                var pwd = ("1234", "1234");
+                var url = "Registro";
+                var result = Barrel.Current.Get<List<Registro>>(key: url);
+
+                  
+                //Navigation.PushAsync(new MenuUserTabbedPage());
+               
+                if (string.IsNullOrEmpty(User) || string.IsNullOrEmpty(Password))
+                {
+                    _ = DisplayAlert("Advertencia", "Campo Vacio", "OK");
+                    return;
+                }
+
+                if (User == "admin" && Password == "admin")
+                {
+                    App.Current.MainPage = new MenuTabbedPage();
+                    return;
+                }
+
+                if (result == null)
+                {
+                    _ = DisplayAlert("Advertencia", "Usuario no registrado, Favor registrarse", "OK");
+                    App.Current.MainPage = new BienvenidaPage();
+                    return;
+                }
                 
-                string lm = Usuario.Text;
-                string dm = Contraseña.Text;
-                Navigation.PushAsync(new MenuUserTabbedPage());
-                //if (string.IsNullOrEmpty(lm) || string.IsNullOrEmpty(dm))
-                //{
-                //    _ = DisplayAlert("Advertencia", "Campo Vacio", "OK"); 
+                foreach (var item in result)
+                {
+                    if (User == item.NombreUsuario && Password == item.Contrasena)
+                    {
+                        App.Current.MainPage = new MenuUserTabbedPage();
+                        return;
+                    }
+                  
+                }
 
-
+              
+                    _ = DisplayAlert("Advertencia", "Usuario o Contraseña incorrecta", "OK");
                 //}
-
-                //else if (lm == user.Item1 && dm == pwd.Item1)
+                //else if (lm ==  && dm == pwd.Item1)
                 //{
-                // Navigation.PushAsync(new MenuTabbedPage());
-                //        Usuario.Text = "";
-                //        Contraseña.Text = "";
-                //        Preferences.Set("admin", id);
+                //    Navigation.PushAsync(new MenuTabbedPage());
+                //    Usuario.Text = "";
+                //    Contraseña.Text = "";
+                //    Preferences.Set("admin", id);
 
                 //}
                 //    else if (lm == user.Item2 && dm == pwd.Item2)
