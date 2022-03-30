@@ -37,7 +37,7 @@ namespace GalloStore.Views
             if (!Barrel.Current.IsExpired(key: url))
             {
                 var result = Barrel.Current.Get<List<Catalogo>>(key: url);
-
+              
                 var addData = new List<Catalogo>();
                 foreach (var item in result)
                 {
@@ -46,6 +46,11 @@ namespace GalloStore.Views
                 //  Barrel.Current.Add(key: url, data: addData, expireIn: TimeSpan.FromDays(200));
                 catalogo = new ObservableCollection<Catalogo>(addData);
 
+                collecTest.ItemsSource = catalogo;
+            }
+            else
+            {
+                catalogo = new ObservableCollection<Catalogo>();
                 collecTest.ItemsSource = catalogo;
             }
         }
@@ -63,6 +68,7 @@ namespace GalloStore.Views
 
             if (result == null)
             {
+                TxtTotal.Text = "0";
                 return;
             }
 
@@ -77,5 +83,17 @@ namespace GalloStore.Views
 
 
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+           var url = "catalogo";
+            Barrel.Current.Empty(key: url);
+            var urlPerson = "Persona";
+            var personResult = Barrel.Current.Get<Persona>(key: urlPerson);
+            DisplayAlert("Datos", "Pedido en camino..", "ok");
+            CargarTotal();
+            CargarData();
+        }
+
     }
 }

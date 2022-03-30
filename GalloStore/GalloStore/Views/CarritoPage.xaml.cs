@@ -102,6 +102,7 @@ namespace GalloStore.Views
             catalogo = new ObservableCollection<Catalogo>();
 
             collecTest.ItemsSource = catalogo;
+            DisplayAlert("Pedido enviado correctamente", "Tiempo Maximo de espera 15 Minutos","ok");
                 // mensaje de pedido enviado...
         }
     }

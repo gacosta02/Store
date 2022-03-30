@@ -69,6 +69,7 @@
             <StackLayout Grid.Row="3" HorizontalOptions="Center" Orientation="Horizontal">
                 <Label Text="Total: "  TextColor="Black" FontAttributes="Bold"/>
                 <Label x:Name="TxtTotal"  TextColor="Black"/>
+                <Button Text="Datos" Clicked="Button_Clicked" Padding="0,10,0,0"/>
             </StackLayout>
         </Grid>
           

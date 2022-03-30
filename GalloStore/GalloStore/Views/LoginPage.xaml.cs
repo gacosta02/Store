@@ -31,9 +31,11 @@ namespace GalloStore.Views
                 var url = "Registro";
                 var result = Barrel.Current.Get<List<Registro>>(key: url);
 
-                  
+                var urlPerson = "Persona";
+                var personResult = Barrel.Current.Get<Persona>(key: urlPerson);
+
                 //Navigation.PushAsync(new MenuUserTabbedPage());
-               
+
                 if (string.IsNullOrEmpty(User) || string.IsNullOrEmpty(Password))
                 {
                     _ = DisplayAlert("Advertencia", "Campo Vacio", "OK");
@@ -57,6 +59,13 @@ namespace GalloStore.Views
                 {
                     if (User == item.NombreUsuario && Password == item.Contrasena)
                     {
+                        personResult = new Persona ()
+                        {
+                            Nombre = item.NombreUsuario,
+                            Direccion = item.Direccion,
+                            Telefono = item.Celular
+                        };
+                        Barrel.Current.Add(key: urlPerson, data: personResult, expireIn: TimeSpan.FromDays(200));
                         App.Current.MainPage = new MenuUserTabbedPage();
                         return;
                     }
