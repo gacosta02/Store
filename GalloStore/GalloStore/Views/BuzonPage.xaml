@@ -9,10 +9,27 @@
   <!--  Page can be added as references or inline-->
     <ContentPage.Content>
         <!--<StackLayout>-->
-            <Grid ColumnDefinitions="AUTO" RowDefinitions="AUTO, AUTO,AUTO" HorizontalOptions="FillAndExpand" Margin="0,20,0,0" RowSpacing="0" VerticalOptions="FillAndExpand">
-                <Label Text="Factura" Grid.Row="0" FontAttributes="Bold" FontSize="Large"/>
+        <ScrollView>
+            <Grid ColumnDefinitions="AUTO" RowDefinitions="AUTO, AUTO,AUTO, AUTO" HorizontalOptions="FillAndExpand" Margin="0,20,0,0" RowSpacing="0" VerticalOptions="FillAndExpand">
+                <Label Text="Factura" Grid.Row="0" FontAttributes="Bold" FontSize="Large" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
+                <StackLayout Grid.Row="1" Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                    <Label Text="Nombre: " FontAttributes="Bold" TextColor="Black"/>
+                    <Label  x:Name="nombre"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                    <Label Text="Direccion :" FontAttributes="Bold" TextColor="Black"/>
+                    <Label x:Name="direccion"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                    <Label Text="Telefono: " FontAttributes="Bold" TextColor="Black"/>
+                    <Label x:Name="telefono"/>
+                    </StackLayout>
+                </StackLayout>
                 <CollectionView ItemsSource="{Binding catalogo}"  
-                                     x:Name="collecTest" Grid.Row="1" HeightRequest="600">
+                                     x:Name="collecTest" Grid.Row="2" HeightRequest="600">
                     <CollectionView.ItemsLayout>
                         <GridItemsLayout Orientation="Vertical" Span="1" />
                     </CollectionView.ItemsLayout>
@@ -52,12 +69,14 @@
 
 
 
-                                    <StackLayout Grid.Column="3" Background="#9C2424" HeightRequest="40" HorizontalOptions="CenterAndExpand"
+                                    <!--<StackLayout Grid.Column="4" Background="#9C2424" HeightRequest="40" HorizontalOptions="CenterAndExpand"
                                                      Margin="0,0,85,20" Orientation="Horizontal">
-                                        <!--<Button Grid.Column="3"   Text="Eliminar del Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" 
+                                        -->
+                                    <!--<Button Grid.Column="3"   Text="Eliminar del Carrito" TextColor="White" HeightRequest="40" BackgroundColor="#9C2424" 
                                         Command="{Binding EliminarCommand, Source={x:Reference BuzPage}}"
                                                     CommandParameter="{Binding .}"/>-->
-                                    </StackLayout>
+                                    <!--
+                                    </StackLayout>-->
 
 
 
@@ -66,13 +85,13 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-            <StackLayout Grid.Row="3" HorizontalOptions="Center" Orientation="Horizontal">
-                <Label Text="Total: "  TextColor="Black" FontAttributes="Bold"/>
-                <Label x:Name="TxtTotal"  TextColor="Black"/>
-                <Button Text="Datos" Clicked="Button_Clicked" Padding="0,10,0,0"/>
-            </StackLayout>
-        </Grid>
-          
+                <StackLayout Grid.Row="4" HorizontalOptions="Center" Orientation="Horizontal">
+                    <Label Text="Total: "  TextColor="Black" FontAttributes="Bold"/>
+                    <Label x:Name="TxtTotal"  TextColor="Black"/>
+                    <Button Text="Despachar" Clicked="Button_Clicked" Margin="0,20,0,0" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </Grid>
+        </ScrollView>
         <!--</StackLayout>-->
     </ContentPage.Content>
 </ContentPage>

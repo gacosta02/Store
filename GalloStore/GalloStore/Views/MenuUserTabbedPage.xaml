@@ -19,15 +19,15 @@
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Soporte" Icon="Ayuda.png">
-        <x:Arguments>
-            <Views:SoportePage/>
-        </x:Arguments>
-    </NavigationPage>
-
     <NavigationPage Title="Carrito" Icon="Carrito.png">
         <x:Arguments>
             <Views:CarritoPage/>
+        </x:Arguments>
+    </NavigationPage>
+    
+    <NavigationPage Title="Soporte" Icon="Ayuda.png">
+        <x:Arguments>
+            <Views:SoportePage/>
         </x:Arguments>
     </NavigationPage>
 

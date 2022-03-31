@@ -63,6 +63,25 @@ namespace GalloStore.Views
 
         private void CargarTotal()
         {
+            var urlPerson = "Persona";
+            var personResult = Barrel.Current.Get<Persona>(key: urlPerson);
+
+            if (personResult == null)
+            {
+                nombre.Text = "";
+                direccion.Text = "";
+                telefono.Text = "";
+
+
+            }
+            else
+            {
+                nombre.Text = personResult.Nombre;
+                direccion.Text = personResult.Direccion;
+                telefono.Text = personResult.Telefono;
+            }
+            
+
             var url = "catalogo";
             var result = Barrel.Current.Get<List<Catalogo>>(key: url);
 
@@ -88,8 +107,7 @@ namespace GalloStore.Views
         {
            var url = "catalogo";
             Barrel.Current.Empty(key: url);
-            var urlPerson = "Persona";
-            var personResult = Barrel.Current.Get<Persona>(key: urlPerson);
+           
             DisplayAlert("Datos", "Pedido en camino..", "ok");
             CargarTotal();
             CargarData();

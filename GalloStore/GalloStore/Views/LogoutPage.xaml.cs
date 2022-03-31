@@ -33,7 +33,7 @@ namespace GalloStore.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-
+            
             Barrel.Current.EmptyAll();
             App.Current.MainPage = new BienvenidaPage();
         }
